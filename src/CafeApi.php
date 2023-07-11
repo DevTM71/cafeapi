@@ -1,30 +1,26 @@
 <?php
 
-namespace RobsonVLeite\CafeApi;
+namespace DevTM71\CafeApi;
 
-/**
- * Class CafeApi
- * @package RobsonVLeite\CafeApi
- */
 abstract class CafeApi
 {
     /** @var string */
-    private $apiUrl;
+    private string $apiUrl;
 
     /** @var array */
-    private $headers;
+    private array $headers;
 
-    /** @var array */
-    private $fields;
-
-    /** @var string */
-    private $endpoint;
+    /** @var array|string|null */
+    private string|array|null $fields;
 
     /** @var string */
-    private $method;
+    private string $endpoint;
+
+    /** @var string */
+    private string $method;
 
     /** @var object */
-    protected $response;
+    protected object $response;
 
     /**
      * CafeApi constructor.
@@ -60,7 +56,7 @@ abstract class CafeApi
     /**
      * @return object|null
      */
-    public function response()
+    public function response(): ?object
     {
         return $this->response;
     }
@@ -68,7 +64,7 @@ abstract class CafeApi
     /**
      * @return object|null
      */
-    public function error()
+    public function error(): ?object
     {
         if (!empty($this->response->errors)) {
             return $this->response->errors;
@@ -87,7 +83,7 @@ abstract class CafeApi
         }
 
         foreach ($headers as $key => $header) {
-            $this->headers[] = "{$key}: {$header}";
+            $this->headers[] = "$key: $header";
         }
     }
 
@@ -103,7 +99,7 @@ abstract class CafeApi
         }
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => "{$this->apiUrl}/{$this->endpoint}",
+            CURLOPT_URL => "$this->apiUrl/$this->endpoint",
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_TIMEOUT => 30,

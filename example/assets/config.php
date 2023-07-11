@@ -1,7 +1,7 @@
 <?php
 /**
  * Formação Full Stack PHP Developer UpInside
- * @author Robson V. Leite <https://www.upinside.com.br>
+ * @author Tiago F. M. Filho <https://www.upinside.com.br>
  *
  * Document content and charset
  */

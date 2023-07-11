@@ -1,11 +1,7 @@
 <?php
 
-namespace RobsonVLeite\CafeApi;
+namespace DevTM71\CafeApi;
 
-/**
- * Class Invoices
- * @package RobsonVLeite\CafeApi
- */
 class Invoices extends CafeApi
 {
     /**

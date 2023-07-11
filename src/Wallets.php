@@ -1,11 +1,7 @@
 <?php
 
-namespace RobsonVLeite\CafeApi;
+namespace DevTM71\CafeApi;
 
-/**
- * Class Wallets
- * @package RobsonVLeite\CafeApi
- */
 class Wallets extends CafeApi
 {
     /**

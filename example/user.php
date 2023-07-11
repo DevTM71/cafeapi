@@ -2,12 +2,12 @@
 require __DIR__ . "/assets/config.php";
 require __DIR__ . "/../vendor/autoload.php";
 
-use RobsonVLeite\CafeApi\Me;
+use DevTM71\CafeApi\Me;
 
 $me = new Me(
     "localhost/fsphp/cafeapi/",
-    "robsonvleite@gmail.com",
-    "12345678"
+    "tiagofmfilho@gmail.com",
+    "guinho365"
 );
 
 /**
@@ -39,11 +39,21 @@ $userData = $user->me()->response()->user;
 ?>
     <form action="" method="post">
         <input type="hidden" name="user" value="true"/>
-        <input type="text" name="first_name" value="<?= ($userData->first_name ?? null); ?>"/>
-        <input type="text" name="last_name" value="<?= ($userData->last_name ?? null); ?>"/>
-        <input type="text" name="genre" value="<?= ($userData->genre ?? null); ?>"/>
-        <input type="text" name="datebirth" value="<?= ($userData->datebirth ?? null); ?>"/>
-        <input type="text" name="document" value="<?= ($userData->document ?? null); ?>"/>
+        <label>Primeiro Nome
+            <input type="text" name="first_name" value="<?= ($userData->first_name ?? null); ?>"/>
+        </label>
+        <label>Ultimo Nome
+            <input type="text" name="last_name" value="<?= ($userData->last_name ?? null); ?>"/>
+        </label>
+        <label>Genero
+            <input type="text" name="genre" value="<?= ($userData->genre ?? null); ?>"/>
+        </label>
+        <label>Data de Nascimento
+            <input type="text" name="datebirth" value="<?= ($userData->datebirth ?? null); ?>"/>
+        </label>
+        <label>Documento
+            <input type="text" name="document" value="<?= ($userData->document ?? null); ?>"/>
+        </label>
         <button>Atualizar</button>
     </form>
 <?php
