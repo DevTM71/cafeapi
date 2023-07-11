@@ -2,12 +2,12 @@
 
 [![Maintainer](http://img.shields.io/badge/maintainer-@m4rtins_tii-blue.svg?style=flat-square)](https://twitter.com/m4rtins_tii)
 [![Source Code](http://img.shields.io/badge/source-DevTM71/cafeapi-blue.svg?style=flat-square)](https://github.com/DevTM71/cafeapi)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/tiagofmartins/cafeapi.svg?style=flat-square)](https://packagist.org/packages/tiagofmartins/cafeapi)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/devtm71/cafeapi.svg?style=flat-square)](https://packagist.org/packages/devtm71/cafeapi)
 [![Latest Version](https://img.shields.io/github/release/DevTM71/cafeapi.svg?style=flat-square)](https://github.com/DevTM71/cafeapi/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Build](https://img.shields.io/scrutinizer/build/g/tiagofmartins/cafeapi.svg?style=flat-square)](https://scrutinizer-ci.com/g/tiagofmartins/cafeapi)
-[![Quality Score](https://img.shields.io/scrutinizer/g/tiagofmartins/cafeapi.svg?style=flat-square)](https://scrutinizer-ci.com/g/tiagofmartins/cafeapi)
-[![Total Downloads](https://img.shields.io/packagist/dt/tiagofmartins/cafeapi.svg?style=flat-square)](https://packagist.org/packages/tiagofmartins/cafeapi)
+[![Build](https://img.shields.io/scrutinizer/build/g/devtm71/cafeapi.svg?style=flat-square)](https://scrutinizer-ci.com/g/devtm71/cafeapi)
+[![Quality Score](https://img.shields.io/scrutinizer/g/devtm71/cafeapi.svg?style=flat-square)](https://scrutinizer-ci.com/g/devtm71/cafeapi)
+[![Total Downloads](https://img.shields.io/packagist/dt/devtm71/cafeapi.svg?style=flat-square)](https://packagist.org/packages/devtm71/cafeapi)
 
 ###### CaféApi Library is a small set of classes developed in UpInside's Full Stack PHP Developer training for integration into the webservice of a SaaS platform developed in the course..
 
@@ -27,13 +27,13 @@ Você pode saber mais **[clicando aqui](https://www.upinside.com.br/fsphp)**.
 Uploader is available via Composer:
 
 ```bash
-"tiagofmartins/cafeapi": "^1.0"
+"devtm71/cafeapi": "^1.0"
 ```
 
 or run
 
 ```bash
-composer require tiagofmartins/cafeapi
+composer require devtm71/cafeapi
 ```
 
 ## Documentation
@@ -49,7 +49,7 @@ Para mais detalhes sobre como usar, veja uma pasta de exemplo no diretório do c
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use TiagoFMartins\CafeApi\Me;
+use DevTM71\CafeApi\Me;
 
 $me = new Me(
     "suaapi.url.com",
@@ -87,7 +87,7 @@ if ($user->error()) {
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use TiagoFMartins\CafeApi\Invoices;
+use DevTM71\CafeApi\Invoices;
 
 $invoices = new Invoices(
     "suaapi.url.com",
